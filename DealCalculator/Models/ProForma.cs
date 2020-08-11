@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DealCalculator.Models
 {
     public class ProForma
     {
+        [Key]
         public int ProFormaId { get; set; }
         public int PropertyId { get; set; }
         public decimal Vacancy { get; set; }

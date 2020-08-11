@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using DealCalculator.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DealCalculator
 {
@@ -24,6 +26,9 @@ namespace DealCalculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<DealCalcContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DealCalcContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

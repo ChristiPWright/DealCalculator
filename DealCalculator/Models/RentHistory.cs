@@ -8,6 +8,7 @@ namespace DealCalculator.Models
 {
     public class RentHistory
     {
+        [Key]
         public int RentId { get; set; }
         public int PropertyId { get; set; }
         public int Term { get; set; }

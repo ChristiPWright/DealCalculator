@@ -8,6 +8,7 @@ namespace DealCalculator.Models
 {
     public class SaleHistory
     {
+        [Key]
         public int SaleId { get; set; }
         public int PropertyId { get; set; }
         [DataType(DataType.Date)]
