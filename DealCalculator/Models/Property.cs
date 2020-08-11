@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace DealCalculator.Models
 {
     public class Property
     {
+        [Key]
         public int PropertyId { get; set; }
         public string StreetAddress { get; set; }
         public string Unit { get; set; }
