@@ -9,7 +9,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DealCalculator.Data
 {
-    //[Table("")]
     public class DealCalcContext:DbContext
     {
         public DealCalcContext (DbContextOptions<DealCalcContext> options) : base(options) { }
